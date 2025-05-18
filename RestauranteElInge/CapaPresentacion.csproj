@@ -77,6 +77,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="proveedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="proveedores.Designer.cs">
+      <DependentUpon>proveedores.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -98,6 +104,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="proveedores.resx">
+      <DependentUpon>proveedores.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="db_Restaurante_El_IngeDataSet.xsc">
       <DependentUpon>db_Restaurante_El_IngeDataSet.xsd</DependentUpon>
     </None>
