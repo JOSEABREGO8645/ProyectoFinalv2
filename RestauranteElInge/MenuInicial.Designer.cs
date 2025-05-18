@@ -55,8 +55,8 @@
             this.btn_Empleados = new System.Windows.Forms.Button();
             this.btn_PrincipalEmpleados = new System.Windows.Forms.Button();
             this.panel_contenedor_de_formularios = new System.Windows.Forms.Panel();
-            this.lbl_Titulo = new System.Windows.Forms.Label();
             this.pictureBoxLogoInicio = new System.Windows.Forms.PictureBox();
+            this.lbl_Titulo = new System.Windows.Forms.Label();
             this.Pnl_logo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.Menu_Lateral.SuspendLayout();
@@ -493,6 +493,17 @@
             this.panel_contenedor_de_formularios.TabIndex = 1;
             this.panel_contenedor_de_formularios.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_contenedor_de_formularios_Paint);
             // 
+            // pictureBoxLogoInicio
+            // 
+            this.pictureBoxLogoInicio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxLogoInicio.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogoInicio.Image")));
+            this.pictureBoxLogoInicio.Location = new System.Drawing.Point(363, 138);
+            this.pictureBoxLogoInicio.Name = "pictureBoxLogoInicio";
+            this.pictureBoxLogoInicio.Size = new System.Drawing.Size(238, 78);
+            this.pictureBoxLogoInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBoxLogoInicio.TabIndex = 1;
+            this.pictureBoxLogoInicio.TabStop = false;
+            // 
             // lbl_Titulo
             // 
             this.lbl_Titulo.AutoSize = true;
@@ -502,17 +513,6 @@
             this.lbl_Titulo.Size = new System.Drawing.Size(734, 88);
             this.lbl_Titulo.TabIndex = 0;
             this.lbl_Titulo.Text = "RESTAURANTE EL INGE";
-            // 
-            // pictureBoxLogoInicio
-            // 
-            this.pictureBoxLogoInicio.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBoxLogoInicio.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogoInicio.Image")));
-            this.pictureBoxLogoInicio.Location = new System.Drawing.Point(365, 173);
-            this.pictureBoxLogoInicio.Name = "pictureBoxLogoInicio";
-            this.pictureBoxLogoInicio.Size = new System.Drawing.Size(238, 78);
-            this.pictureBoxLogoInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxLogoInicio.TabIndex = 1;
-            this.pictureBoxLogoInicio.TabStop = false;
             // 
             // panel_MenuInicial
             // 
