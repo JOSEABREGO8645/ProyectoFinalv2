@@ -16,7 +16,7 @@ namespace RestauranteElInge
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new panel_MenuInicial());
+            Application.Run(new CapaSeguridad.frmLogIn());
         }
     }
 }

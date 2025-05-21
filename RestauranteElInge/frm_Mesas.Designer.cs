@@ -43,6 +43,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_eliminar = new System.Windows.Forms.Button();
             this.cbox_TipoMesa = new System.Windows.Forms.ComboBox();
             this.cbox_cantidadSillas = new System.Windows.Forms.ComboBox();
             this.cboxUbicación = new System.Windows.Forms.ComboBox();
@@ -51,7 +52,6 @@
             this.lbl_Fecha = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.btn_eliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMesas)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -242,6 +242,17 @@
             this.groupBox1.TabIndex = 54;
             this.groupBox1.TabStop = false;
             // 
+            // btn_eliminar
+            // 
+            this.btn_eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_eliminar.Location = new System.Drawing.Point(735, 132);
+            this.btn_eliminar.Name = "btn_eliminar";
+            this.btn_eliminar.Size = new System.Drawing.Size(135, 37);
+            this.btn_eliminar.TabIndex = 56;
+            this.btn_eliminar.Text = "Eliminar";
+            this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
+            // 
             // cbox_TipoMesa
             // 
             this.cbox_TipoMesa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -339,17 +350,6 @@
             this.label8.TabIndex = 52;
             this.label8.Text = "Fecha actual:";
             // 
-            // btn_eliminar
-            // 
-            this.btn_eliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_eliminar.Location = new System.Drawing.Point(735, 132);
-            this.btn_eliminar.Name = "btn_eliminar";
-            this.btn_eliminar.Size = new System.Drawing.Size(135, 37);
-            this.btn_eliminar.TabIndex = 56;
-            this.btn_eliminar.Text = "Eliminar";
-            this.btn_eliminar.UseVisualStyleBackColor = true;
-            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
-            // 
             // frm_Mesas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -361,6 +361,7 @@
             this.Controls.Add(this.lbl_Fecha);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label8);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frm_Mesas";
             this.Text = "frm_Mesas";
             this.Load += new System.EventHandler(this.frm_Mesas_Load);

@@ -46,6 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CapaSeguridad\frmLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaSeguridad\frmLogIn.Designer.cs">
+      <DependentUpon>frmLogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaSeguridad\UserCache.cs" />
+    <Compile Include="CapaSeguridad\UserConectionToSql.cs" />
+    <Compile Include="CapaSeguridad\UserDao.cs" />
+    <Compile Include="CapaSeguridad\UserModel.cs" />
     <Compile Include="db_Restaurante_El_IngeDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -69,11 +79,11 @@
     <Compile Include="frm_Mesas.Designer.cs">
       <DependentUpon>frm_Mesas.cs</DependentUpon>
     </Compile>
-    <Compile Include="MenuInicial.cs">
+    <Compile Include="frmMenuInicial.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuInicial.Designer.cs">
-      <DependentUpon>MenuInicial.cs</DependentUpon>
+    <Compile Include="frmMenuInicial.Designer.cs">
+      <DependentUpon>frmMenuInicial.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -83,6 +93,9 @@
     <Compile Include="proveedores.Designer.cs">
       <DependentUpon>proveedores.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CapaSeguridad\frmLogIn.resx">
+      <DependentUpon>frmLogIn.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
@@ -92,8 +105,8 @@
     <EmbeddedResource Include="frm_Mesas.resx">
       <DependentUpon>frm_Mesas.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenuInicial.resx">
-      <DependentUpon>MenuInicial.cs</DependentUpon>
+    <EmbeddedResource Include="frmMenuInicial.resx">
+      <DependentUpon>frmMenuInicial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -103,6 +116,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="proveedores.resx">
       <DependentUpon>proveedores.cs</DependentUpon>
@@ -140,10 +154,24 @@
       <Project>{78fcf1fa-e1e3-454a-8df1-89c9d5019ee2}</Project>
       <Name>CapaLogica</Name>
     </ProjectReference>
-    <ProjectReference Include="..\CapaSeguridad\CapaSeguridad.csproj">
-      <Project>{bbeec356-fa21-4e33-b8b0-1c90e7aa0523}</Project>
-      <Name>CapaSeguridad</Name>
-    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\inventory_32dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout_32dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_book_32dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\food_bank_32dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person_32dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home_32dp.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

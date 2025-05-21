@@ -275,6 +275,8 @@ namespace RestauranteElInge
                     btn.Tag = btn.Text;
                 }
             }
+
+           
         }
         #region ComportamientoDeLABarraLateral
         //lineas para contraer el menu lateral
@@ -291,12 +293,11 @@ namespace RestauranteElInge
             {
                 Menu_Lateral.Width = anchoColapsado;
                 Pnl_logo.Width = anchoColapsado;
-
+                //HACER EL LOGO MAS PEQUEÑO AL CONTRAER
                 pictureBoxLogo.Size = new Size(60, 60);
                 pictureBoxLogo.SizeMode = PictureBoxSizeMode.Zoom;
-                pictureBoxLogo.Location = new Point(
-                    (Pnl_logo.Width - pictureBoxLogo.Width) / 2,
-                    (Pnl_logo.Height - pictureBoxLogo.Height) / 2);
+                //MANTENER EL LOGO EN EL CENTRO
+                pictureBoxLogo.Location = new Point( (Pnl_logo.Width - pictureBoxLogo.Width) / 2, (Pnl_logo.Height - pictureBoxLogo.Height) / 2);
 
                 foreach (Control control in  Menu_Lateral.Controls)
                 {
@@ -304,6 +305,7 @@ namespace RestauranteElInge
                     {
                         btn.Text = "";
                         btn.ImageAlign = ContentAlignment.MiddleCenter;
+                        btn.TextImageRelation = TextImageRelation.ImageBeforeText;
                     }
                 }
                 menuExpandido = false;
@@ -316,15 +318,14 @@ namespace RestauranteElInge
 
                 pictureBoxLogo.Size = new Size(238, 78);
                 pictureBoxLogo.SizeMode = PictureBoxSizeMode.Zoom;
-                pictureBoxLogo.Location = new Point(
-    (Pnl_logo.Width - pictureBoxLogo.Width) / 2,
-    (Pnl_logo.Height - pictureBoxLogo.Height) / 2);
+                pictureBoxLogo.Location = new Point((Pnl_logo.Width - pictureBoxLogo.Width) / 2,(Pnl_logo.Height - pictureBoxLogo.Height) / 2);
                 foreach (Control control in Menu_Lateral.Controls)
                 {
                     if (control is Button btn)
                     {
                         btn.Text = btn.Tag?.ToString();
                         btn.ImageAlign = ContentAlignment.MiddleLeft;
+                        btn.TextImageRelation = TextImageRelation.ImageBeforeText;
                     }
                 }
                 menuExpandido = true;;
@@ -334,5 +335,14 @@ namespace RestauranteElInge
 
         #endregion
 
+        private void pictureBoxLogoInicio_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBoxtTitle_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

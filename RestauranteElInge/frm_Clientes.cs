@@ -139,5 +139,10 @@ namespace RestauranteElInge
         {
             MtdLimpiarCampos();
         }
+
+        private void txtCodigoCliente_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

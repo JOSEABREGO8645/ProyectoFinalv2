@@ -9,7 +9,9 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 
+
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using RestauranteElInge;
 
 
 namespace CapaSeguridad
@@ -20,6 +22,7 @@ namespace CapaSeguridad
         public frmLogIn()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void txt_usuario_Enter(object sender, EventArgs e)
@@ -76,18 +79,7 @@ namespace CapaSeguridad
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
-        private void Panel1_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void FrmLogin_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
+        
         private void btn_acceder_Click(object sender, EventArgs e)
         {
             if (txt_usuario.Text != "Username" && txt_usuario.TextLength > 2)
@@ -98,10 +90,10 @@ namespace CapaSeguridad
                     var validLogin = user.LoginUser(txt_usuario.Text, txt_Contrasenia.Text);
                     if (validLogin == true)
                     {
-                         MenuInicial = new panel_MenuInicial();
+                        panel_MenuInicial MenuInicial = new panel_MenuInicial();
                         MessageBox.Show("Bienvenido " + UserCache.NombreUsuario + ", " + UserCache.Rol);
                         MenuInicial.Show();
-
+                        
                         this.Hide();
                     }
                     else
@@ -115,6 +107,30 @@ namespace CapaSeguridad
                 else msgError("Please enter password.");
             }
             else msgError("Please enter username.");
+        }
+
+        private void msgError(string msg)
+        {
+            lbl_ErrorMessage.Text = "    "+msg;
+            lbl_ErrorMessage.Visible = true;
+        }
+
+        private void frmLogIn_MouseDown_1(object sender, MouseEventArgs e)
+        {
+
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Pnl_InicioSesion_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

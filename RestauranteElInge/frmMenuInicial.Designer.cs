@@ -1,4 +1,6 @@
-﻿namespace RestauranteElInge
+﻿using System.Drawing;
+
+namespace RestauranteElInge
 {
     partial class panel_MenuInicial
     {
@@ -56,7 +58,7 @@
             this.btn_PrincipalEmpleados = new System.Windows.Forms.Button();
             this.panel_contenedor_de_formularios = new System.Windows.Forms.Panel();
             this.pictureBoxLogoInicio = new System.Windows.Forms.PictureBox();
-            this.lbl_Titulo = new System.Windows.Forms.Label();
+            this.db_Restaurante_El_IngeDataSet1 = new RestauranteElInge.db_Restaurante_El_IngeDataSet();
             this.Pnl_logo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.Menu_Lateral.SuspendLayout();
@@ -67,6 +69,7 @@
             this.panel_empleados.SuspendLayout();
             this.panel_contenedor_de_formularios.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogoInicio)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.db_Restaurante_El_IngeDataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // Pnl_logo
@@ -96,16 +99,20 @@
             this.btn_PrincipalInicio.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_PrincipalInicio.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_PrincipalInicio.FlatAppearance.BorderSize = 0;
-            this.btn_PrincipalInicio.FlatAppearance.MouseDownBackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_PrincipalInicio.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_PrincipalInicio.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btn_PrincipalInicio.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.btn_PrincipalInicio.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(71)))), ((int)(((byte)(79)))));
+            this.btn_PrincipalInicio.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_PrincipalInicio.Font = new System.Drawing.Font("Mont Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_PrincipalInicio.ForeColor = System.Drawing.Color.Snow;
+            this.btn_PrincipalInicio.Image = global::RestauranteElInge.Properties.Resources.home_32dp;
+            this.btn_PrincipalInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_PrincipalInicio.Location = new System.Drawing.Point(0, 78);
             this.btn_PrincipalInicio.Name = "btn_PrincipalInicio";
             this.btn_PrincipalInicio.Size = new System.Drawing.Size(233, 42);
             this.btn_PrincipalInicio.TabIndex = 1;
             this.btn_PrincipalInicio.Text = "INICIO";
+            this.btn_PrincipalInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_PrincipalInicio.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_PrincipalInicio.UseVisualStyleBackColor = false;
             this.btn_PrincipalInicio.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -134,15 +141,17 @@
             // 
             // btn_cerrarSistema
             // 
-            this.btn_cerrarSistema.BackColor = System.Drawing.Color.Red;
+            this.btn_cerrarSistema.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(8)))), ((int)(((byte)(8)))));
             this.btn_cerrarSistema.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_cerrarSistema.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_cerrarSistema.FlatAppearance.BorderSize = 0;
-            this.btn_cerrarSistema.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.btn_cerrarSistema.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btn_cerrarSistema.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btn_cerrarSistema.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(202)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.btn_cerrarSistema.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_cerrarSistema.Font = new System.Drawing.Font("Mont Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_cerrarSistema.Font = new System.Drawing.Font("Mont Bold", 13.25F, System.Drawing.FontStyle.Bold);
             this.btn_cerrarSistema.ForeColor = System.Drawing.Color.Snow;
+            this.btn_cerrarSistema.Image = global::RestauranteElInge.Properties.Resources.logout_32dp;
+            this.btn_cerrarSistema.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_cerrarSistema.Location = new System.Drawing.Point(0, 753);
             this.btn_cerrarSistema.Name = "btn_cerrarSistema";
             this.btn_cerrarSistema.Size = new System.Drawing.Size(233, 36);
@@ -185,16 +194,19 @@
             this.btn_PrincipalPagos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_PrincipalPagos.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_PrincipalPagos.FlatAppearance.BorderSize = 0;
-            this.btn_PrincipalPagos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(110)))), ((int)(((byte)(122)))));
-            this.btn_PrincipalPagos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(110)))), ((int)(((byte)(122)))));
+            this.btn_PrincipalPagos.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(90)))), ((int)(((byte)(100)))));
+            this.btn_PrincipalPagos.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(90)))), ((int)(((byte)(100)))));
             this.btn_PrincipalPagos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_PrincipalPagos.Font = new System.Drawing.Font("Mont Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_PrincipalPagos.Font = new System.Drawing.Font("Mont Bold", 11F, System.Drawing.FontStyle.Bold);
             this.btn_PrincipalPagos.ForeColor = System.Drawing.Color.Snow;
+            this.btn_PrincipalPagos.Image = ((System.Drawing.Image)(resources.GetObject("btn_PrincipalPagos.Image")));
+            this.btn_PrincipalPagos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_PrincipalPagos.Location = new System.Drawing.Point(0, 669);
             this.btn_PrincipalPagos.Name = "btn_PrincipalPagos";
             this.btn_PrincipalPagos.Size = new System.Drawing.Size(233, 36);
             this.btn_PrincipalPagos.TabIndex = 10;
             this.btn_PrincipalPagos.Text = "PAGOS";
+            this.btn_PrincipalPagos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_PrincipalPagos.UseVisualStyleBackColor = false;
             this.btn_PrincipalPagos.Click += new System.EventHandler(this.btn_PrincipalPagos_Click);
             // 
@@ -249,16 +261,19 @@
             this.btn_PrincipalOrdenes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_PrincipalOrdenes.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_PrincipalOrdenes.FlatAppearance.BorderSize = 0;
-            this.btn_PrincipalOrdenes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(110)))), ((int)(((byte)(122)))));
-            this.btn_PrincipalOrdenes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(110)))), ((int)(((byte)(122)))));
+            this.btn_PrincipalOrdenes.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(90)))), ((int)(((byte)(100)))));
+            this.btn_PrincipalOrdenes.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(90)))), ((int)(((byte)(100)))));
             this.btn_PrincipalOrdenes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_PrincipalOrdenes.Font = new System.Drawing.Font("Mont Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_PrincipalOrdenes.Font = new System.Drawing.Font("Mont Bold", 11F, System.Drawing.FontStyle.Bold);
             this.btn_PrincipalOrdenes.ForeColor = System.Drawing.Color.Snow;
+            this.btn_PrincipalOrdenes.Image = global::RestauranteElInge.Properties.Resources.menu_book_32dp;
+            this.btn_PrincipalOrdenes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_PrincipalOrdenes.Location = new System.Drawing.Point(0, 553);
             this.btn_PrincipalOrdenes.Name = "btn_PrincipalOrdenes";
             this.btn_PrincipalOrdenes.Size = new System.Drawing.Size(233, 36);
             this.btn_PrincipalOrdenes.TabIndex = 8;
             this.btn_PrincipalOrdenes.Text = "ORDENES";
+            this.btn_PrincipalOrdenes.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_PrincipalOrdenes.UseVisualStyleBackColor = false;
             this.btn_PrincipalOrdenes.Click += new System.EventHandler(this.button7_Click);
             // 
@@ -313,16 +328,19 @@
             this.btn_PrincipalMenuInventario.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_PrincipalMenuInventario.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_PrincipalMenuInventario.FlatAppearance.BorderSize = 0;
-            this.btn_PrincipalMenuInventario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(110)))), ((int)(((byte)(122)))));
-            this.btn_PrincipalMenuInventario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(110)))), ((int)(((byte)(122)))));
+            this.btn_PrincipalMenuInventario.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(90)))), ((int)(((byte)(100)))));
+            this.btn_PrincipalMenuInventario.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(90)))), ((int)(((byte)(100)))));
             this.btn_PrincipalMenuInventario.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_PrincipalMenuInventario.Font = new System.Drawing.Font("Mont Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_PrincipalMenuInventario.Font = new System.Drawing.Font("Mont Bold", 10.5F, System.Drawing.FontStyle.Bold);
             this.btn_PrincipalMenuInventario.ForeColor = System.Drawing.Color.Snow;
+            this.btn_PrincipalMenuInventario.Image = global::RestauranteElInge.Properties.Resources.inventory_32dp;
+            this.btn_PrincipalMenuInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_PrincipalMenuInventario.Location = new System.Drawing.Point(0, 420);
             this.btn_PrincipalMenuInventario.Name = "btn_PrincipalMenuInventario";
             this.btn_PrincipalMenuInventario.Size = new System.Drawing.Size(233, 36);
             this.btn_PrincipalMenuInventario.TabIndex = 6;
             this.btn_PrincipalMenuInventario.Text = "MENU E INVENTARIO";
+            this.btn_PrincipalMenuInventario.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_PrincipalMenuInventario.UseVisualStyleBackColor = false;
             this.btn_PrincipalMenuInventario.Click += new System.EventHandler(this.btn_PrincipalMenuInventario_Click);
             // 
@@ -379,16 +397,20 @@
             this.btn_PrincipalClientesMesas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_PrincipalClientesMesas.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_PrincipalClientesMesas.FlatAppearance.BorderSize = 0;
-            this.btn_PrincipalClientesMesas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(110)))), ((int)(((byte)(122)))));
-            this.btn_PrincipalClientesMesas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(110)))), ((int)(((byte)(122)))));
+            this.btn_PrincipalClientesMesas.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(90)))), ((int)(((byte)(100)))));
+            this.btn_PrincipalClientesMesas.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(90)))), ((int)(((byte)(100)))));
             this.btn_PrincipalClientesMesas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_PrincipalClientesMesas.Font = new System.Drawing.Font("Mont Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_PrincipalClientesMesas.Font = new System.Drawing.Font("Mont Bold", 11F, System.Drawing.FontStyle.Bold);
             this.btn_PrincipalClientesMesas.ForeColor = System.Drawing.Color.Snow;
+            this.btn_PrincipalClientesMesas.Image = global::RestauranteElInge.Properties.Resources.food_bank_32dp;
+            this.btn_PrincipalClientesMesas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_PrincipalClientesMesas.Location = new System.Drawing.Point(0, 291);
             this.btn_PrincipalClientesMesas.Name = "btn_PrincipalClientesMesas";
+            this.btn_PrincipalClientesMesas.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btn_PrincipalClientesMesas.Size = new System.Drawing.Size(233, 36);
             this.btn_PrincipalClientesMesas.TabIndex = 4;
             this.btn_PrincipalClientesMesas.Text = "CLIENTES Y MESAS";
+            this.btn_PrincipalClientesMesas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_PrincipalClientesMesas.UseVisualStyleBackColor = false;
             this.btn_PrincipalClientesMesas.Click += new System.EventHandler(this.btn_PrincipalClientesMesas_Click);
             // 
@@ -468,16 +490,19 @@
             this.btn_PrincipalEmpleados.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_PrincipalEmpleados.Dock = System.Windows.Forms.DockStyle.Top;
             this.btn_PrincipalEmpleados.FlatAppearance.BorderSize = 0;
-            this.btn_PrincipalEmpleados.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(110)))), ((int)(((byte)(122)))));
-            this.btn_PrincipalEmpleados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(110)))), ((int)(((byte)(122)))));
+            this.btn_PrincipalEmpleados.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(90)))), ((int)(((byte)(100)))));
+            this.btn_PrincipalEmpleados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(90)))), ((int)(((byte)(100)))));
             this.btn_PrincipalEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_PrincipalEmpleados.Font = new System.Drawing.Font("Mont Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_PrincipalEmpleados.Font = new System.Drawing.Font("Mont Bold", 11.5F, System.Drawing.FontStyle.Bold);
             this.btn_PrincipalEmpleados.ForeColor = System.Drawing.Color.Snow;
+            this.btn_PrincipalEmpleados.Image = global::RestauranteElInge.Properties.Resources.person_32dp;
+            this.btn_PrincipalEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_PrincipalEmpleados.Location = new System.Drawing.Point(0, 120);
             this.btn_PrincipalEmpleados.Name = "btn_PrincipalEmpleados";
             this.btn_PrincipalEmpleados.Size = new System.Drawing.Size(233, 36);
             this.btn_PrincipalEmpleados.TabIndex = 2;
             this.btn_PrincipalEmpleados.Text = "EMPLEADOS";
+            this.btn_PrincipalEmpleados.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.btn_PrincipalEmpleados.UseVisualStyleBackColor = false;
             this.btn_PrincipalEmpleados.Click += new System.EventHandler(this.btn_PrincipalEmpleados_Click);
             // 
@@ -485,9 +510,9 @@
             // 
             this.panel_contenedor_de_formularios.BackColor = System.Drawing.Color.White;
             this.panel_contenedor_de_formularios.Controls.Add(this.pictureBoxLogoInicio);
-            this.panel_contenedor_de_formularios.Controls.Add(this.lbl_Titulo);
             this.panel_contenedor_de_formularios.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel_contenedor_de_formularios.Location = new System.Drawing.Point(250, 0);
+            this.panel_contenedor_de_formularios.MinimumSize = new System.Drawing.Size(1014, 681);
             this.panel_contenedor_de_formularios.Name = "panel_contenedor_de_formularios";
             this.panel_contenedor_de_formularios.Size = new System.Drawing.Size(1014, 681);
             this.panel_contenedor_de_formularios.TabIndex = 1;
@@ -497,22 +522,18 @@
             // 
             this.pictureBoxLogoInicio.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pictureBoxLogoInicio.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogoInicio.Image")));
-            this.pictureBoxLogoInicio.Location = new System.Drawing.Point(363, 138);
+            this.pictureBoxLogoInicio.Location = new System.Drawing.Point(335, 205);
             this.pictureBoxLogoInicio.Name = "pictureBoxLogoInicio";
-            this.pictureBoxLogoInicio.Size = new System.Drawing.Size(238, 78);
+            this.pictureBoxLogoInicio.Size = new System.Drawing.Size(415, 195);
             this.pictureBoxLogoInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxLogoInicio.TabIndex = 1;
             this.pictureBoxLogoInicio.TabStop = false;
+            this.pictureBoxLogoInicio.Click += new System.EventHandler(this.pictureBoxLogoInicio_Click);
             // 
-            // lbl_Titulo
+            // db_Restaurante_El_IngeDataSet1
             // 
-            this.lbl_Titulo.AutoSize = true;
-            this.lbl_Titulo.Font = new System.Drawing.Font("Mont SemiBold", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_Titulo.Location = new System.Drawing.Point(135, 261);
-            this.lbl_Titulo.Name = "lbl_Titulo";
-            this.lbl_Titulo.Size = new System.Drawing.Size(734, 88);
-            this.lbl_Titulo.TabIndex = 0;
-            this.lbl_Titulo.Text = "RESTAURANTE EL INGE";
+            this.db_Restaurante_El_IngeDataSet1.DataSetName = "db_Restaurante_El_IngeDataSet";
+            this.db_Restaurante_El_IngeDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // panel_MenuInicial
             // 
@@ -533,8 +554,8 @@
             this.panel_clientes_mesas.ResumeLayout(false);
             this.panel_empleados.ResumeLayout(false);
             this.panel_contenedor_de_formularios.ResumeLayout(false);
-            this.panel_contenedor_de_formularios.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogoInicio)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.db_Restaurante_El_IngeDataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -568,7 +589,7 @@
         private System.Windows.Forms.Panel panel_contenedor_de_formularios;
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.PictureBox pictureBoxLogoInicio;
-        private System.Windows.Forms.Label lbl_Titulo;
+        private db_Restaurante_El_IngeDataSet db_Restaurante_El_IngeDataSet1;
     }
 }
 
