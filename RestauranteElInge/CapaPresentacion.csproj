@@ -46,16 +46,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CapaSeguridad\frmLogIn.cs">
+    <Compile Include="CapaSeguridad\capaseguridad\FrmLogIn.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="CapaSeguridad\frmLogIn.Designer.cs">
-      <DependentUpon>frmLogIn.cs</DependentUpon>
+    <Compile Include="CapaSeguridad\capaseguridad\FrmLogIn.Designer.cs">
+      <DependentUpon>FrmLogIn.cs</DependentUpon>
     </Compile>
-    <Compile Include="CapaSeguridad\UserCache.cs" />
-    <Compile Include="CapaSeguridad\UserConectionToSql.cs" />
-    <Compile Include="CapaSeguridad\UserDao.cs" />
-    <Compile Include="CapaSeguridad\UserModel.cs" />
+    <Compile Include="CapaSeguridad\capaseguridad\UserCache.cs" />
+    <Compile Include="CapaSeguridad\capaseguridad\UserConectionToSql.cs" />
+    <Compile Include="CapaSeguridad\capaseguridad\UserDao.cs" />
+    <Compile Include="CapaSeguridad\capaseguridad\UserModel.cs" />
     <Compile Include="db_Restaurante_El_IngeDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -93,8 +93,8 @@
     <Compile Include="proveedores.Designer.cs">
       <DependentUpon>proveedores.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="CapaSeguridad\frmLogIn.resx">
-      <DependentUpon>frmLogIn.cs</DependentUpon>
+    <EmbeddedResource Include="CapaSeguridad\capaseguridad\FrmLogIn.resx">
+      <DependentUpon>FrmLogIn.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>

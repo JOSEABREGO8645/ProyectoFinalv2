@@ -1,4 +1,7 @@
-﻿using System;
+﻿
+using CapaSeguridad;
+using CapaSeguridadUserCache;    
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,18 +11,22 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace RestauranteElInge
 {
     public partial class panel_MenuInicial : Form
     {
-        #region BarraLateral
+
         public panel_MenuInicial()
         {
             InitializeComponent();
             customizeDesing();
-            
+            lbl_nombreUsuario.Text = UserCache.NombreUsuario ?? "usuario no identidficado";
+            lbl_RolUsuario.Text = UserCache.Rol ?? "usuario no identidficado";
+            lbl_Estado.Text = UserCache.Estado ?? "usuario no identidficado";
+
         }
-        
+        #region BarraLateral
         private void customizeDesing()
         {
             //OCULTA LOS PANELES DEL MENU
@@ -238,6 +245,7 @@ namespace RestauranteElInge
         }
         #endregion
         #endregion
+
         private Form activeForm = null;
         private void OpenChildForm(Form childForm)
         {
@@ -265,7 +273,10 @@ namespace RestauranteElInge
         {
             if(MessageBox.Show("Se cerrará la sesión", "Advertencia",
                 MessageBoxButtons.YesNo,MessageBoxIcon.Warning)== DialogResult.Yes)
-            this.Close();
+            {
+                //cerrar el formulario
+                this.Close();
+            }
         }
 
         private void panel_contenedor_de_formularios_Paint(object sender, PaintEventArgs e)
@@ -323,7 +334,7 @@ namespace RestauranteElInge
                 Menu_Lateral.Width = anchoExpandido;
                 Pnl_logo.Width = anchoExpandido;
 
-                pictureBoxLogo.Size = new Size(76, 223);
+                pictureBoxLogo.Size = new Size(76, 130);
                 pictureBoxLogo.SizeMode = PictureBoxSizeMode.Zoom;
                 pictureBoxLogo.Location = new Point((Pnl_logo.Width - pictureBoxLogo.Width) / 2,(Pnl_logo.Height - pictureBoxLogo.Height) / 2);
                 foreach (Control control in Menu_Lateral.Controls)
@@ -348,6 +359,12 @@ namespace RestauranteElInge
         }
 
         private void pictureBoxtTitle_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void lbl_nombreUsuario_Click(object sender, EventArgs e)
         {
 
         }

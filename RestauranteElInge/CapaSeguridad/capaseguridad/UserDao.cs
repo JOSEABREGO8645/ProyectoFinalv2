@@ -5,12 +5,14 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CapaSeguridad;
+using CapaSeguridadUserCache;
 
-
-namespace CapaSeguridad
+namespace RestauranteElInge.CapaSeguridad
 {
     public class UserDao : UserConnectionToSql
     {
+        UserCache userCache = new UserCache();
         public bool Login(string NombreUsuario, string Contrasenia)
         {
             using (var connection = GetConnection())

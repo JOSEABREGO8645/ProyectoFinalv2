@@ -8,21 +8,38 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-
-
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using RestauranteElInge;
+using CapaSeguridad;
+using CapaSeguridadUserCache;
 
 
 namespace CapaSeguridad
 {
     public partial class frmLogIn : Form
     {
-        
+        panel_MenuInicial MenuInicial = new panel_MenuInicial();
+        UserCache UserCache = new UserCache();
         public frmLogIn()
         {
             InitializeComponent();
-            this.StartPosition = FormStartPosition.CenterScreen;
+        }
+        // Se importa la siguiente libreria para agregar logica de redimencionar el forms login
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
+
+        private void Panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void FrmLogin_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
         private void txt_usuario_Enter(object sender, EventArgs e)
@@ -73,33 +90,34 @@ namespace CapaSeguridad
             this.WindowState= FormWindowState.Minimized;
         }
 
-        // Se importa la siguiente libreria para agregar logica de redimencionar el forms login
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
-
         
+        private void msgError(string msg)
+        {
+            lbl_error.Text = "    "+ msg;
+            lbl_error.Visible = true;
+        }
         private void btn_acceder_Click(object sender, EventArgs e)
         {
             if (txt_usuario.Text != "Username" && txt_usuario.TextLength > 2)
             {
                 if (txt_Contrasenia.Text != "Password")
                 {
+                    
                     UserModel user = new UserModel();
                     var validLogin = user.LoginUser(txt_usuario.Text, txt_Contrasenia.Text);
                     if (validLogin == true)
                     {
-                        panel_MenuInicial MenuInicial = new panel_MenuInicial();
+                         MenuInicial = new panel_MenuInicial();
                         MessageBox.Show("Bienvenido " + UserCache.NombreUsuario + ", " + UserCache.Rol);
+                        MenuInicial.FormClosed += new FormClosedEventHandler(LogOut);
                         MenuInicial.Show();
-                        MenuInicial.FormClosed += logOut;
                         this.Hide();
                     }
                     else
                     {
                         msgError("Usuario o Contraseña incorrecta.");
                         txt_Contrasenia.Text = "Password";
+                        txt_Contrasenia.UseSystemPasswordChar = false;
                         txt_Contrasenia.Focus();
                     }
                 }
@@ -108,44 +126,22 @@ namespace CapaSeguridad
             else msgError("Please enter username.");
         }
 
-        private void msgError(string msg)
-        {
-            lbl_ErrorMessage.Text = "    "+msg;
-            lbl_ErrorMessage.Visible = true;
-        }
-
-        private void frmLogIn_MouseDown_1(object sender, MouseEventArgs e)
-        {
-
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Pnl_InicioSesion_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
         private void frmLogIn_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void logOut(object sender, EventArgs e)
+        private void txt_usuario_TextChanged(object sender, EventArgs e)
         {
-            txt_Contrasenia.Text = "Contraseña";
-            txt_Contrasenia.UseSystemPasswordChar = false;
-            txt_usuario.Text = "Usuario";
-            lbl_ErrorMessage.Visible=false;
-            this.Show();
-            txt_usuario.Focus();
-        }
 
+        }
+        private void LogOut(object sender, FormClosedEventArgs e)
+        {
+            txt_Contrasenia.Clear();
+            txt_usuario.Clear();
+            lbl_error.Visible = false;
+            this.Show();
+            
+        }
     }
 }

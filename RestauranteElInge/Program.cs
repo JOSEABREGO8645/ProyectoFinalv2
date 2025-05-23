@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CapaSeguridad;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace RestauranteElInge
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CapaSeguridad.frmLogIn());
+            Application.Run(new frmLogIn());
         }
     }
 }
