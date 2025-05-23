@@ -78,16 +78,16 @@ namespace RestauranteElInge
             this.Pnl_logo.Dock = System.Windows.Forms.DockStyle.Top;
             this.Pnl_logo.Location = new System.Drawing.Point(0, 0);
             this.Pnl_logo.Name = "Pnl_logo";
-            this.Pnl_logo.Size = new System.Drawing.Size(233, 78);
+            this.Pnl_logo.Size = new System.Drawing.Size(233, 223);
             this.Pnl_logo.TabIndex = 0;
             // 
             // pictureBoxLogo
             // 
-            this.pictureBoxLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxLogo.Dock = System.Windows.Forms.DockStyle.Left;
             this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
             this.pictureBoxLogo.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(238, 78);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(76, 223);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxLogo.TabIndex = 0;
             this.pictureBoxLogo.TabStop = false;
@@ -106,9 +106,9 @@ namespace RestauranteElInge
             this.btn_PrincipalInicio.ForeColor = System.Drawing.Color.Snow;
             this.btn_PrincipalInicio.Image = global::RestauranteElInge.Properties.Resources.home_32dp;
             this.btn_PrincipalInicio.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_PrincipalInicio.Location = new System.Drawing.Point(0, 78);
+            this.btn_PrincipalInicio.Location = new System.Drawing.Point(0, 223);
             this.btn_PrincipalInicio.Name = "btn_PrincipalInicio";
-            this.btn_PrincipalInicio.Size = new System.Drawing.Size(233, 42);
+            this.btn_PrincipalInicio.Size = new System.Drawing.Size(233, 60);
             this.btn_PrincipalInicio.TabIndex = 1;
             this.btn_PrincipalInicio.Text = "INICIO";
             this.btn_PrincipalInicio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -136,7 +136,7 @@ namespace RestauranteElInge
             this.Menu_Lateral.Dock = System.Windows.Forms.DockStyle.Left;
             this.Menu_Lateral.Location = new System.Drawing.Point(0, 0);
             this.Menu_Lateral.Name = "Menu_Lateral";
-            this.Menu_Lateral.Size = new System.Drawing.Size(250, 681);
+            this.Menu_Lateral.Size = new System.Drawing.Size(250, 720);
             this.Menu_Lateral.TabIndex = 0;
             // 
             // btn_cerrarSistema
@@ -152,11 +152,11 @@ namespace RestauranteElInge
             this.btn_cerrarSistema.ForeColor = System.Drawing.Color.Snow;
             this.btn_cerrarSistema.Image = global::RestauranteElInge.Properties.Resources.logout_32dp;
             this.btn_cerrarSistema.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_cerrarSistema.Location = new System.Drawing.Point(0, 753);
+            this.btn_cerrarSistema.Location = new System.Drawing.Point(0, 916);
             this.btn_cerrarSistema.Name = "btn_cerrarSistema";
             this.btn_cerrarSistema.Size = new System.Drawing.Size(233, 36);
             this.btn_cerrarSistema.TabIndex = 12;
-            this.btn_cerrarSistema.Text = "CERRAR SISTEMA";
+            this.btn_cerrarSistema.Text = "CERRAR SESION";
             this.btn_cerrarSistema.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_cerrarSistema.UseVisualStyleBackColor = false;
             this.btn_cerrarSistema.Click += new System.EventHandler(this.btn_cerrarSistema_Click);
@@ -166,7 +166,7 @@ namespace RestauranteElInge
             this.panel_pagos.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(38)))), ((int)(((byte)(56)))), ((int)(((byte)(53)))));
             this.panel_pagos.Controls.Add(this.btn_pagoOrdenes);
             this.panel_pagos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_pagos.Location = new System.Drawing.Point(0, 705);
+            this.panel_pagos.Location = new System.Drawing.Point(0, 868);
             this.panel_pagos.Name = "panel_pagos";
             this.panel_pagos.Size = new System.Drawing.Size(233, 48);
             this.panel_pagos.TabIndex = 11;
@@ -201,7 +201,7 @@ namespace RestauranteElInge
             this.btn_PrincipalPagos.ForeColor = System.Drawing.Color.Snow;
             this.btn_PrincipalPagos.Image = ((System.Drawing.Image)(resources.GetObject("btn_PrincipalPagos.Image")));
             this.btn_PrincipalPagos.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_PrincipalPagos.Location = new System.Drawing.Point(0, 669);
+            this.btn_PrincipalPagos.Location = new System.Drawing.Point(0, 832);
             this.btn_PrincipalPagos.Name = "btn_PrincipalPagos";
             this.btn_PrincipalPagos.Size = new System.Drawing.Size(233, 36);
             this.btn_PrincipalPagos.TabIndex = 10;
@@ -216,7 +216,7 @@ namespace RestauranteElInge
             this.panel_ordenes.Controls.Add(this.btn_detalleOdenes);
             this.panel_ordenes.Controls.Add(this.btn_encabezadoOrdenes);
             this.panel_ordenes.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_ordenes.Location = new System.Drawing.Point(0, 589);
+            this.panel_ordenes.Location = new System.Drawing.Point(0, 752);
             this.panel_ordenes.Name = "panel_ordenes";
             this.panel_ordenes.Size = new System.Drawing.Size(233, 80);
             this.panel_ordenes.TabIndex = 9;
@@ -268,7 +268,7 @@ namespace RestauranteElInge
             this.btn_PrincipalOrdenes.ForeColor = System.Drawing.Color.Snow;
             this.btn_PrincipalOrdenes.Image = global::RestauranteElInge.Properties.Resources.menu_book_32dp;
             this.btn_PrincipalOrdenes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_PrincipalOrdenes.Location = new System.Drawing.Point(0, 553);
+            this.btn_PrincipalOrdenes.Location = new System.Drawing.Point(0, 716);
             this.btn_PrincipalOrdenes.Name = "btn_PrincipalOrdenes";
             this.btn_PrincipalOrdenes.Size = new System.Drawing.Size(233, 36);
             this.btn_PrincipalOrdenes.TabIndex = 8;
@@ -283,7 +283,7 @@ namespace RestauranteElInge
             this.panel_menus_inventario.Controls.Add(this.btn_inventario);
             this.panel_menus_inventario.Controls.Add(this.btn_menus);
             this.panel_menus_inventario.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_menus_inventario.Location = new System.Drawing.Point(0, 456);
+            this.panel_menus_inventario.Location = new System.Drawing.Point(0, 619);
             this.panel_menus_inventario.Name = "panel_menus_inventario";
             this.panel_menus_inventario.Size = new System.Drawing.Size(233, 97);
             this.panel_menus_inventario.TabIndex = 7;
@@ -335,7 +335,7 @@ namespace RestauranteElInge
             this.btn_PrincipalMenuInventario.ForeColor = System.Drawing.Color.Snow;
             this.btn_PrincipalMenuInventario.Image = global::RestauranteElInge.Properties.Resources.inventory_32dp;
             this.btn_PrincipalMenuInventario.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_PrincipalMenuInventario.Location = new System.Drawing.Point(0, 420);
+            this.btn_PrincipalMenuInventario.Location = new System.Drawing.Point(0, 583);
             this.btn_PrincipalMenuInventario.Name = "btn_PrincipalMenuInventario";
             this.btn_PrincipalMenuInventario.Size = new System.Drawing.Size(233, 36);
             this.btn_PrincipalMenuInventario.TabIndex = 6;
@@ -350,7 +350,7 @@ namespace RestauranteElInge
             this.panel_clientes_mesas.Controls.Add(this.btn_mesas);
             this.panel_clientes_mesas.Controls.Add(this.btn_clientes);
             this.panel_clientes_mesas.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_clientes_mesas.Location = new System.Drawing.Point(0, 327);
+            this.panel_clientes_mesas.Location = new System.Drawing.Point(0, 490);
             this.panel_clientes_mesas.Name = "panel_clientes_mesas";
             this.panel_clientes_mesas.Size = new System.Drawing.Size(233, 93);
             this.panel_clientes_mesas.TabIndex = 5;
@@ -404,7 +404,7 @@ namespace RestauranteElInge
             this.btn_PrincipalClientesMesas.ForeColor = System.Drawing.Color.Snow;
             this.btn_PrincipalClientesMesas.Image = global::RestauranteElInge.Properties.Resources.food_bank_32dp;
             this.btn_PrincipalClientesMesas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_PrincipalClientesMesas.Location = new System.Drawing.Point(0, 291);
+            this.btn_PrincipalClientesMesas.Location = new System.Drawing.Point(0, 454);
             this.btn_PrincipalClientesMesas.Name = "btn_PrincipalClientesMesas";
             this.btn_PrincipalClientesMesas.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.btn_PrincipalClientesMesas.Size = new System.Drawing.Size(233, 36);
@@ -421,7 +421,7 @@ namespace RestauranteElInge
             this.panel_empleados.Controls.Add(this.btn_usuarios);
             this.panel_empleados.Controls.Add(this.btn_Empleados);
             this.panel_empleados.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel_empleados.Location = new System.Drawing.Point(0, 156);
+            this.panel_empleados.Location = new System.Drawing.Point(0, 319);
             this.panel_empleados.Name = "panel_empleados";
             this.panel_empleados.Size = new System.Drawing.Size(233, 135);
             this.panel_empleados.TabIndex = 3;
@@ -497,7 +497,7 @@ namespace RestauranteElInge
             this.btn_PrincipalEmpleados.ForeColor = System.Drawing.Color.Snow;
             this.btn_PrincipalEmpleados.Image = global::RestauranteElInge.Properties.Resources.person_32dp;
             this.btn_PrincipalEmpleados.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_PrincipalEmpleados.Location = new System.Drawing.Point(0, 120);
+            this.btn_PrincipalEmpleados.Location = new System.Drawing.Point(0, 283);
             this.btn_PrincipalEmpleados.Name = "btn_PrincipalEmpleados";
             this.btn_PrincipalEmpleados.Size = new System.Drawing.Size(233, 36);
             this.btn_PrincipalEmpleados.TabIndex = 2;
@@ -514,15 +514,17 @@ namespace RestauranteElInge
             this.panel_contenedor_de_formularios.Location = new System.Drawing.Point(250, 0);
             this.panel_contenedor_de_formularios.MinimumSize = new System.Drawing.Size(1014, 681);
             this.panel_contenedor_de_formularios.Name = "panel_contenedor_de_formularios";
-            this.panel_contenedor_de_formularios.Size = new System.Drawing.Size(1014, 681);
+            this.panel_contenedor_de_formularios.Size = new System.Drawing.Size(1030, 720);
             this.panel_contenedor_de_formularios.TabIndex = 1;
             this.panel_contenedor_de_formularios.Paint += new System.Windows.Forms.PaintEventHandler(this.panel_contenedor_de_formularios_Paint);
             // 
             // pictureBoxLogoInicio
             // 
-            this.pictureBoxLogoInicio.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBoxLogoInicio.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBoxLogoInicio.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogoInicio.Image")));
-            this.pictureBoxLogoInicio.Location = new System.Drawing.Point(335, 205);
+            this.pictureBoxLogoInicio.Location = new System.Drawing.Point(383, 255);
             this.pictureBoxLogoInicio.Name = "pictureBoxLogoInicio";
             this.pictureBoxLogoInicio.Size = new System.Drawing.Size(415, 195);
             this.pictureBoxLogoInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -538,9 +540,10 @@ namespace RestauranteElInge
             // panel_MenuInicial
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.ClientSize = new System.Drawing.Size(1280, 720);
             this.Controls.Add(this.panel_contenedor_de_formularios);
             this.Controls.Add(this.Menu_Lateral);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "panel_MenuInicial";
             this.Text = "Form1";
@@ -563,7 +566,6 @@ namespace RestauranteElInge
         #endregion
 
         private System.Windows.Forms.Panel Pnl_logo;
-        private System.Windows.Forms.Button btn_PrincipalInicio;
         private System.Windows.Forms.Panel Menu_Lateral;
         private System.Windows.Forms.Panel panel_empleados;
         private System.Windows.Forms.Button btn_Empleados;
@@ -590,6 +592,7 @@ namespace RestauranteElInge
         private System.Windows.Forms.PictureBox pictureBoxLogo;
         private System.Windows.Forms.PictureBox pictureBoxLogoInicio;
         private db_Restaurante_El_IngeDataSet db_Restaurante_El_IngeDataSet1;
+        public System.Windows.Forms.Button btn_PrincipalInicio;
     }
 }
 

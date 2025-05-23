@@ -199,6 +199,7 @@
             this.MinimumSize = new System.Drawing.Size(780, 330);
             this.Name = "frmLogIn";
             this.Text = "frmLogIn";
+            this.Load += new System.EventHandler(this.frmLogIn_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmLogIn_MouseDown_1);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogoInicio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Cerrar)).EndInit();

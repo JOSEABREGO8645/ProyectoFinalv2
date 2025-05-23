@@ -93,14 +93,13 @@ namespace CapaSeguridad
                         panel_MenuInicial MenuInicial = new panel_MenuInicial();
                         MessageBox.Show("Bienvenido " + UserCache.NombreUsuario + ", " + UserCache.Rol);
                         MenuInicial.Show();
-                        
+                        MenuInicial.FormClosed += logOut;
                         this.Hide();
                     }
                     else
                     {
                         msgError("Usuario o Contraseña incorrecta.");
                         txt_Contrasenia.Text = "Password";
-                        txt_Contrasenia.UseSystemPasswordChar = false;
                         txt_Contrasenia.Focus();
                     }
                 }
@@ -132,5 +131,21 @@ namespace CapaSeguridad
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+        private void frmLogIn_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void logOut(object sender, EventArgs e)
+        {
+            txt_Contrasenia.Text = "Contraseña";
+            txt_Contrasenia.UseSystemPasswordChar = false;
+            txt_usuario.Text = "Usuario";
+            lbl_ErrorMessage.Visible=false;
+            this.Show();
+            txt_usuario.Focus();
+        }
+
     }
 }

@@ -17,10 +17,12 @@ namespace RestauranteElInge
         {
             InitializeComponent();
             customizeDesing();
+            
         }
         
         private void customizeDesing()
         {
+            //OCULTA LOS PANELES DEL MENU
             panel_clientes_mesas.Visible = false;
             panel_empleados.Visible = false;
             panel_menus_inventario.Visible = false;
@@ -29,6 +31,7 @@ namespace RestauranteElInge
         }
         private void hideSubmenu()
         {
+            //OCULTA LOS PANELES DEL SUBMENU
             if (panel_clientes_mesas.Visible == true)
                 panel_clientes_mesas.Visible = false;
 
@@ -49,6 +52,7 @@ namespace RestauranteElInge
         }
         private void showSubmenu(Panel subMenu)
         {
+            //MUESTRA LOS PANENELES DEL MENU
             if (subMenu.Visible == false)
             {
                 hideSubmenu();
@@ -60,7 +64,7 @@ namespace RestauranteElInge
             }
 
         }
-#region nosequehacenRegion
+#region 1
         private void button1_Click(object sender, EventArgs e)
         {
             if (activeForm != null)
@@ -237,6 +241,7 @@ namespace RestauranteElInge
         private Form activeForm = null;
         private void OpenChildForm(Form childForm)
         {
+            //PARA ABRIR LOS FORMULARIOS HIJO EN EL PANEL
             if (activeForm != null)
             {
                 activeForm.Close();
@@ -258,6 +263,8 @@ namespace RestauranteElInge
 
         private void btn_cerrarSistema_Click(object sender, EventArgs e)
         {
+            if(MessageBox.Show("Se cerrará la sesión", "Advertencia",
+                MessageBoxButtons.YesNo,MessageBoxIcon.Warning)== DialogResult.Yes)
             this.Close();
         }
 
@@ -316,7 +323,7 @@ namespace RestauranteElInge
                 Menu_Lateral.Width = anchoExpandido;
                 Pnl_logo.Width = anchoExpandido;
 
-                pictureBoxLogo.Size = new Size(238, 78);
+                pictureBoxLogo.Size = new Size(76, 223);
                 pictureBoxLogo.SizeMode = PictureBoxSizeMode.Zoom;
                 pictureBoxLogo.Location = new Point((Pnl_logo.Width - pictureBoxLogo.Width) / 2,(Pnl_logo.Height - pictureBoxLogo.Height) / 2);
                 foreach (Control control in Menu_Lateral.Controls)
