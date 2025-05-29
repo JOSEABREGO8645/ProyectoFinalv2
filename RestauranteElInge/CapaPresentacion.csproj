@@ -61,29 +61,29 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>db_Restaurante_El_IngeDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="FrmEpleados .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEpleados .Designer.cs">
+      <DependentUpon>FrmEpleados .cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmUsuarios.Designer.cs">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_Clientes.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_Clientes.Designer.cs">
-      <DependentUpon>frm_Clientes.cs</DependentUpon>
-    </Compile>
-    <Compile Include="frm_Mesas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frm_Mesas.Designer.cs">
-      <DependentUpon>frm_Mesas.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmMenuInicial.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmMenuInicial.Designer.cs">
       <DependentUpon>frmMenuInicial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_Planillas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_Planillas.Designer.cs">
+      <DependentUpon>frm_Planillas.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -96,17 +96,17 @@
     <EmbeddedResource Include="CapaSeguridad\capaseguridad\FrmLogIn.resx">
       <DependentUpon>FrmLogIn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmEpleados .resx">
+      <DependentUpon>FrmEpleados .cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmUsuarios.resx">
       <DependentUpon>frmUsuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_Clientes.resx">
-      <DependentUpon>frm_Clientes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="frm_Mesas.resx">
-      <DependentUpon>frm_Mesas.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmMenuInicial.resx">
       <DependentUpon>frmMenuInicial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_Planillas.resx">
+      <DependentUpon>frm_Planillas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

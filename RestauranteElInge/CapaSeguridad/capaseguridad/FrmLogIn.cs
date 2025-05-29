@@ -23,6 +23,7 @@ namespace CapaSeguridad
         public frmLogIn()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
         // Se importa la siguiente libreria para agregar logica de redimencionar el forms login
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -30,17 +31,9 @@ namespace CapaSeguridad
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
-        private void Panel1_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
+       
 
-        private void FrmLogin_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
+       
 
         private void txt_usuario_Enter(object sender, EventArgs e)
         {
@@ -143,5 +136,20 @@ namespace CapaSeguridad
             this.Show();
             
         }
+
+        private void frmLogIn_MouseDown_1(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+        
+    
     }
 }

@@ -31,17 +31,19 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogIn));
             this.txt_usuario = new System.Windows.Forms.TextBox();
             this.txt_Contrasenia = new System.Windows.Forms.TextBox();
-            this.btn_PrincipalEmpleados = new System.Windows.Forms.Button();
             this.btn_acceder = new System.Windows.Forms.Button();
             this.pictureBoxLogoInicio = new System.Windows.Forms.PictureBox();
             this.btn_Cerrar = new System.Windows.Forms.PictureBox();
             this.btn_Minimizar = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_error = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogoInicio)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Cerrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Minimizar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // txt_usuario
@@ -76,24 +78,6 @@
             this.txt_Contrasenia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_Contrasenia.Enter += new System.EventHandler(this.txt_Contrasenia_Enter);
             this.txt_Contrasenia.Leave += new System.EventHandler(this.txt_Contrasenia_Leave);
-            // 
-            // btn_PrincipalEmpleados
-            // 
-            this.btn_PrincipalEmpleados.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(110)))), ((int)(((byte)(122)))));
-            this.btn_PrincipalEmpleados.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_PrincipalEmpleados.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btn_PrincipalEmpleados.FlatAppearance.BorderSize = 0;
-            this.btn_PrincipalEmpleados.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(90)))), ((int)(((byte)(100)))));
-            this.btn_PrincipalEmpleados.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(69)))), ((int)(((byte)(90)))), ((int)(((byte)(100)))));
-            this.btn_PrincipalEmpleados.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_PrincipalEmpleados.Font = new System.Drawing.Font("Mont Bold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_PrincipalEmpleados.ForeColor = System.Drawing.Color.Snow;
-            this.btn_PrincipalEmpleados.Location = new System.Drawing.Point(0, 0);
-            this.btn_PrincipalEmpleados.Name = "btn_PrincipalEmpleados";
-            this.btn_PrincipalEmpleados.Size = new System.Drawing.Size(780, 36);
-            this.btn_PrincipalEmpleados.TabIndex = 7;
-            this.btn_PrincipalEmpleados.Text = "INICIAR SESIÓN";
-            this.btn_PrincipalEmpleados.UseVisualStyleBackColor = false;
             // 
             // btn_acceder
             // 
@@ -164,6 +148,28 @@
             this.lbl_error.Text = "Error";
             this.lbl_error.Visible = false;
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(84)))), ((int)(((byte)(110)))), ((int)(((byte)(122)))));
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(780, 33);
+            this.panel1.TabIndex = 15;
+            this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Mont Bold", 14.25F, System.Drawing.FontStyle.Bold);
+            this.label1.ForeColor = System.Drawing.SystemColors.Control;
+            this.label1.Location = new System.Drawing.Point(300, 4);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(162, 26);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "INICIAR SESION";
+            // 
             // frmLogIn
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -177,17 +183,20 @@
             this.Controls.Add(this.txt_usuario);
             this.Controls.Add(this.pictureBoxLogoInicio);
             this.Controls.Add(this.btn_acceder);
-            this.Controls.Add(this.btn_PrincipalEmpleados);
             this.Controls.Add(this.txt_Contrasenia);
+            this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frmLogIn";
             this.Opacity = 0.9D;
             this.Text = "frmLogIn";
             this.Load += new System.EventHandler(this.frmLogIn_Load);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.frmLogIn_MouseDown_1);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogoInicio)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Cerrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_Minimizar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -197,12 +206,13 @@
 
         private System.Windows.Forms.TextBox txt_usuario;
         private System.Windows.Forms.TextBox txt_Contrasenia;
-        private System.Windows.Forms.Button btn_PrincipalEmpleados;
         private System.Windows.Forms.Button btn_acceder;
         private System.Windows.Forms.PictureBox pictureBoxLogoInicio;
         private System.Windows.Forms.PictureBox btn_Cerrar;
         private System.Windows.Forms.PictureBox btn_Minimizar;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label lbl_error;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -20,6 +20,7 @@ namespace RestauranteElInge
         public panel_MenuInicial()
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
             customizeDesing();
             lbl_nombreUsuario.Text = UserCache.NombreUsuario ?? "usuario no identidficado";
             lbl_RolUsuario.Text = UserCache.Rol ?? "usuario no identidficado";
@@ -113,7 +114,26 @@ namespace RestauranteElInge
 
         private void btn_Empleados_Click(object sender, EventArgs e)
         {
-            //abrir form
+            if (activeForm != null && activeForm.Text != "frmUsuarios")
+            {
+                //si la comprobacion es correcta pregunta si se quiere pasar a otro formulario
+                DialogResult result = MessageBox.Show(
+                    "Esta seguro que desea cambiar de ventana \n\nLos datos que no esten guardados se perderán.",
+                    "¿Desea continuar?",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
+                // si el resultado es si cambia
+                if (result == DialogResult.Yes)
+                {
+                    OpenChildForm(new FrmEpleados(lbl_nombreUsuario.Text));
+                }
+            }
+            //si la comprobación es incorrecta simplemente lo habre
+            else
+            {
+                OpenChildForm(new FrmEpleados(lbl_nombreUsuario.Text));
+            }
+            hideSubmenu();
             hideSubmenu();
         }
 
@@ -132,20 +152,38 @@ namespace RestauranteElInge
                 // si el resultado es si cambia
                 if (result == DialogResult.Yes)
                 {
-                    OpenChildForm(new frmUsuarios());
+                    OpenChildForm(new frmUsuarios(lbl_nombreUsuario.Text));
                 }
             }
             //si la comprobación es incorrecta simplemente lo habre
             else
             {
-                OpenChildForm(new frmUsuarios());
+                OpenChildForm(new frmUsuarios(lbl_nombreUsuario.Text));
             }
             hideSubmenu();
         }
 
         private void btn_PlanPlanillas_Click(object sender, EventArgs e)
         {
-            //abrir form
+            if (activeForm != null && activeForm.Text != "frm_Planillas")
+            {
+                DialogResult result = MessageBox.Show(
+                    "Esta seguro que desea cambiar de ventana \n\nLos datos que no esten guardados se perderán.",
+                    "¿Desea continuar?",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Warning);
+                if (result == DialogResult.Yes)
+                {
+                    OpenChildForm(new frm_Planillas(lbl_nombreUsuario.Text));
+                }
+            }
+            else
+            {
+                OpenChildForm(new frm_Planillas(lbl_nombreUsuario.Text));
+            }
+
+
+            hideSubmenu();
             hideSubmenu();
         }
         #endregion
@@ -166,12 +204,12 @@ namespace RestauranteElInge
                     MessageBoxIcon.Warning);
                 if (result == DialogResult.Yes)
                 {
-                    OpenChildForm(new frm_Clientes());
+                    OpenChildForm(new frm_Clientes(lbl_nombreUsuario.Text));
                 }
             }
             else
             {
-                OpenChildForm(new frm_Clientes());
+                OpenChildForm(new frm_Clientes(lbl_nombreUsuario.Text));
             }
             hideSubmenu();
         }
@@ -187,12 +225,12 @@ namespace RestauranteElInge
                     MessageBoxIcon.Warning);
                 if (result == DialogResult.Yes)
                 {
-                    OpenChildForm(new frm_Mesas());
+                    OpenChildForm(new frm_Mesas(lbl_nombreUsuario.Text));
                 }
             }
             else
             {
-                OpenChildForm(new frm_Mesas());
+                OpenChildForm(new frm_Mesas(lbl_nombreUsuario.Text));
             }
             
            

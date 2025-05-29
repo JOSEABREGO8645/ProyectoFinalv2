@@ -1,0 +1,10 @@
+C:\Users\FIDO\Documents\#2 PROGRAMACION 3\RestauranteElInge\RestauranteElInge\bin\Debug\RestauranteElInge.exe.config
+C:\Users\FIDO\Documents\#2 PROGRAMACION 3\RestauranteElInge\RestauranteElInge\bin\Debug\RestauranteElInge.exe
+C:\Users\FIDO\Documents\#2 PROGRAMACION 3\RestauranteElInge\RestauranteElInge\bin\Debug\RestauranteElInge.pdb
+C:\Users\FIDO\Documents\#2 PROGRAMACION 3\RestauranteElInge\RestauranteElInge\obj\Debug\RestauranteElInge.csproj.AssemblyReference.cache
+C:\Users\FIDO\Documents\#2 PROGRAMACION 3\RestauranteElInge\RestauranteElInge\obj\Debug\RestauranteElInge.MenuInicial.resources
+C:\Users\FIDO\Documents\#2 PROGRAMACION 3\RestauranteElInge\RestauranteElInge\obj\Debug\RestauranteElInge.Properties.Resources.resources
+C:\Users\FIDO\Documents\#2 PROGRAMACION 3\RestauranteElInge\RestauranteElInge\obj\Debug\RestauranteElInge.csproj.GenerateResource.cache
+C:\Users\FIDO\Documents\#2 PROGRAMACION 3\RestauranteElInge\RestauranteElInge\obj\Debug\RestauranteElInge.csproj.CoreCompileInputs.cache
+C:\Users\FIDO\Documents\#2 PROGRAMACION 3\RestauranteElInge\RestauranteElInge\obj\Debug\RestauranteElInge.exe
+C:\Users\FIDO\Documents\#2 PROGRAMACION 3\RestauranteElInge\RestauranteElInge\obj\Debug\RestauranteElInge.pdb

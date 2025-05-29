@@ -1,0 +1,9 @@
+C:\Users\FIDO\Documents\#2 PROGRAMACION 3\RestauranteElInge\CapaLogica\bin\Debug\CapaLogica.dll
+C:\Users\FIDO\Documents\#2 PROGRAMACION 3\RestauranteElInge\CapaLogica\bin\Debug\CapaLogica.pdb
+C:\Users\FIDO\Documents\#2 PROGRAMACION 3\RestauranteElInge\CapaLogica\obj\Debug\CapaLogica.csproj.AssemblyReference.cache
+C:\Users\FIDO\Documents\#2 PROGRAMACION 3\RestauranteElInge\CapaLogica\obj\Debug\CapaLogica.csproj.CoreCompileInputs.cache
+C:\Users\FIDO\Documents\#2 PROGRAMACION 3\RestauranteElInge\CapaLogica\obj\Debug\CapaLogica.dll
+C:\Users\FIDO\Documents\#2 PROGRAMACION 3\RestauranteElInge\CapaLogica\obj\Debug\CapaLogica.pdb
+C:\Users\FIDO\Documents\#2 PROGRAMACION 3\RestauranteElInge\CapaLogica\bin\Debug\CapaDatos.dll
+C:\Users\FIDO\Documents\#2 PROGRAMACION 3\RestauranteElInge\CapaLogica\bin\Debug\CapaDatos.pdb
+C:\Users\FIDO\Documents\#2 PROGRAMACION 3\RestauranteElInge\CapaLogica\obj\Debug\CapaLogica.csproj.Up2Date

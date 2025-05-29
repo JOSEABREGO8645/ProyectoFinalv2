@@ -1,0 +1,9 @@
+C:\Users\FIDO\Documents\#2 PROGRAMACION 3\RestauranteElInge\CapaSeguridad\bin\Debug\CapaSeguridad.dll
+C:\Users\FIDO\Documents\#2 PROGRAMACION 3\RestauranteElInge\CapaSeguridad\bin\Debug\CapaSeguridad.pdb
+C:\Users\FIDO\Documents\#2 PROGRAMACION 3\RestauranteElInge\CapaSeguridad\obj\Debug\CapaSeguridad.csproj.AssemblyReference.cache
+C:\Users\FIDO\Documents\#2 PROGRAMACION 3\RestauranteElInge\CapaSeguridad\obj\Debug\CapaSeguridad.csproj.CoreCompileInputs.cache
+C:\Users\FIDO\Documents\#2 PROGRAMACION 3\RestauranteElInge\CapaSeguridad\obj\Debug\CapaSeguridad.dll
+C:\Users\FIDO\Documents\#2 PROGRAMACION 3\RestauranteElInge\CapaSeguridad\obj\Debug\CapaSeguridad.pdb
+C:\Users\FIDO\Documents\#2 PROGRAMACION 3\RestauranteElInge\CapaSeguridad\obj\Debug\CapaSeguridad.frmLogIn.resources
+C:\Users\FIDO\Documents\#2 PROGRAMACION 3\RestauranteElInge\CapaSeguridad\obj\Debug\CapaSeguridad.csproj.GenerateResource.cache
+C:\Users\FIDO\Documents\#2 PROGRAMACION 3\RestauranteElInge\CapaSeguridad\obj\Debug\CapaSeguridad.Properties.Resources.resources
